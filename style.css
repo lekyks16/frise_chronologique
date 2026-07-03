@@ -1,4 +1,4 @@
-body {background-color: lightcyan; font-family: "Birds of Paradise", cursive;}
+.index-body {background-color: lightcyan; font-family: "Birds of Paradise", cursive;}
 
 h1 {color: darkblue;text-align: center; font-size: 40px;}
 
@@ -7,11 +7,12 @@ h1 {color: darkblue;text-align: center; font-size: 40px;}
 .content {margin: 20px auto;max-width: 800px;padding: 20px;background-color: lightblue;
     border-radius: 8px;box-shadow: 1 4px 6px rgba(0, 0, 0, 1);}
 
-.mafrisechronologique {display: block;margin: 20px auto;max-width: 800px;padding: 20px;background-color: darkblue;color: white;
+.mafrisechronologique {display: block;margin: 20px auto;max-width: 800px;padding: 20px;
+    background-color: darkblue;color: white;
     ;border-radius: 8px;cursor: pointer;font-size: 16px;width: 400px;height: 100px;
     text-align: center;box-shadow: 2 6px 10px rgba(0, 0, 0, 0.5);font-size:30px;}
 
-.conclusion {color: #333333;text-align: center;font-size: 24px;}
+.conclusion {color: #333333;text-align: center;font-size: 16px;}
 
 .footer-gauche {font-size: 15px;text-align:left ;margin-top: 20px;color: #000000;}
 
@@ -20,3 +21,13 @@ h1 {color: darkblue;text-align: center; font-size: 40px;}
 .politique {cursor: pointer}
 .contact {cursor: pointer}
 .information {cursor: pointer}
+
+* {box-sizing: border-box;}
+.index2-body {margin: 0;height: 100vh;display: flex;flex-direction: column;}
+header {background-color: lightblue;border: 2px solid black;height: 70px;border-radius: 12px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);margin-bottom: 10px;}
+main {display: flex; flex: 1;gap: 10px;}
+aside {width: 200px;background-color: lightblue;border: 2px solid black;
+    border-radius: 12px;box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);}
+#workspace {flex: 1;border: 2px solid black;background-color: white;border-radius: 12px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);}
