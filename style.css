@@ -4,8 +4,19 @@ h1 {color: darkblue;text-align: center; font-size: 40px;}
 
 .introduction {color: #333333;text-align: center;font-size: 24px;}
 
-.content {margin: 20px auto;max-width: 800px;padding: 20px;background-color: lightblue;border-radius: 8px;box-shadow: 1 4px 6px rgba(0, 0, 0, 1);}
+.content {margin: 20px auto;max-width: 800px;padding: 20px;background-color: lightblue;
+    border-radius: 8px;box-shadow: 1 4px 6px rgba(0, 0, 0, 1);}
 
-button {display: block;margin: 20px auto;padding: 10px 20px;background-color: darkblue;color: white;border: none;border-radius: 8px;cursor: pointer;font-size: 16px;}
+.mafrisechronologique {display: block;margin: 20px auto;max-width: 800px;padding: 20px;background-color: darkblue;color: white;
+    ;border-radius: 8px;cursor: pointer;font-size: 16px;width: 400px;height: 100px;
+    text-align: center;box-shadow: 2 6px 10px rgba(0, 0, 0, 0.5);font-size:30px;}
 
 .conclusion {color: #333333;text-align: center;font-size: 24px;}
+
+.footer-gauche {font-size: 15px;text-align:left ;margin-top: 20px;color: #000000;}
+
+.footer-droit {font-size: 15px;text-align:right ;margin-top: 20px;color: #000000;}
+
+.politique {cursor: pointer}
+.contact {cursor: pointer}
+.information {cursor: pointer}
