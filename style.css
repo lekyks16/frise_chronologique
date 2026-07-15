@@ -27,9 +27,7 @@ h1 {color: darkblue;text-align: center; font-size: 40px;}
 header {background-color: lightblue;border: 2px solid black;height: 70px;border-radius: 12px;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);margin-bottom: 10px;display: flex;
     align-items: center;gap: 10px;}
-main {display: flex; flex: 1;gap: 10px;}
-aside {width: 200px;background-color: lightblue;border: 2px solid black;
-    border-radius: 12px;box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);}
+main {display: flex; flex: 1;gap: 10px;; padding: 10px;}
 #workspace {flex: 1;border: 2px solid black;background-color: white;border-radius: 12px;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);}
 
@@ -41,4 +39,15 @@ aside {width: 200px;background-color: lightblue;border: 2px solid black;
     border-radius: 12px;box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);cursor: pointer;}
 #refaire {margin: 10px;padding: 10px;background-color: lightblue;border: 2px solid black;
     border-radius: 12px;box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);cursor: pointer;}
+
+.timeline {width: 80%;height: 250px;border: 2px dashed red;display: flex;flex-direction: column;}
+
+.timeline-top {flex: 1; display:flex;justify-content: center;align-items: center;}
+.border-bottom {width: 90%;height:4px; background : black;}
+
+.timeline-events {flex: 2;border: 2px dashed green;}
+
+.timeline-bottom {flex: 1; display:flex;justify-content: center;align-items: center;}
+.border-top {width: 90%;height:4px; background : black;}
+
 
