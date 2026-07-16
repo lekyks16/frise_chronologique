@@ -73,7 +73,9 @@ main {display: flex; flex: 1;gap: 10px;; padding: 10px;}
 .timeline-top {flex: 1; display:flex;justify-content: center;align-items: center;}
 .border-bottom {width: 90%;height:4px; background : black;}
 
-.timeline-events {flex: 2;border: 2px dashed green;}
+.timelineEvents {flex: 2;border: 2px dashed green;}
+.evenement {width: 180px;height: 60px;border: 2px solid black;border-radius: 10px;display: flex;
+    justify-content: center;align-items: center;font-weight: bold;}
 
 .timeline-bottom {flex: 1; display:flex;justify-content: center;align-items: center;}
 .border-top {width: 90%;height:4px; background : black;}

@@ -24,9 +24,22 @@
         <button id="nouvelElement">Nouvel élément</button>
         <div id="modalNouvelElement" class="modalNouvelElement">
             <div class="modalContentNouvelElement">
-                <p>Créer un évènement</p>
-                <button id="creerNouvelElement">Créer</button>
-                <button id="annulerNouvelElement">Annuler</button>
+                <h2>Nouvel événement</h2>
+
+                <label for="titre">Titre :</label>
+                <input type="text" id="titre">
+
+                <label for="dateDebut">Date de début :</label>
+                <input type="date" id="dateDebut">
+
+                <label for="dateFin">Date de fin :</label>
+                <input type="date" id="dateFin">
+
+                <label for="couleur">Couleur :</label>
+                <input type="color" id="couleur">
+
+<button id="creerNouvelElement">Créer</button>
+<button id="annulerNouvelElement">Annuler</button>
             </div>
         </div>
         <button id="annuler">Annuler</button>
@@ -45,7 +58,7 @@
                     <div class="border-bottom"></div>
                 </div>
 
-                <div class="timeline-events"></div>
+                <div class="timelineEvents"></div>
 
                 <div class="timeline-bottom">
                     <div class="border-top"></div>
