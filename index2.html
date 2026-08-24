@@ -1,43 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Frise chronologique</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="index2-body">
 
+    <!-- =================== -->
+    <!-- BARRE D'OUTILS -->
+    <!-- =================== -->
+
     <header>
+
         <a href="index.html" class="retour">← Retour</a>
+
         <h3>Barre d'outil :</h3>
 
-        <button id="sauvegarder">Sauvegarder</button>
+
+        <!-- Sauvegarder -->
+
+        <button id="sauvegarder">
+            Sauvegarder
+        </button>
+
+
+        <!-- Modal sauvegarde -->
+
         <div id="modalSauvegarder" class="modalSauvegarder">
+
             <div class="modalContentSauvegarder">
-                <p>Voulez-vous vraiment sauvegarder la frise ?</p>
-                <button id="confirmerSauvegarder">Confirmer</button>
-                <button id="annulerSauvegarder">Annuler</button>
+
+                <p>
+                    Voulez-vous vraiment sauvegarder la frise ?
+                </p>
+
+                <button id="confirmerSauvegarder">
+                    Confirmer
+                </button>
+
+                <button id="annulerSauvegarder">
+                    Annuler
+                </button>
+
             </div>
+
         </div>
 
-        <button id="nouvelElement">Nouvel élément</button>
+
+        <!-- Nouvel élément -->
+
+        <button id="nouvelElement">
+            Nouvel élément
+        </button>
+
+
+        <!-- Modal nouvel événement -->
 
         <div id="modalNouvelElement" class="modalNouvelElement">
+
             <div class="modalContentNouvelElement">
 
                 <h2>Nouvel événement</h2>
 
-                <label for="titre">Titre :</label>
-                <input type="text" id="titre">
+
+                <label for="titre">
+                    Titre :
+                </label>
+
+                <input
+                    type="text"
+                    id="titre"
+                >
+
 
                 <h3>Date de début</h3>
 
-                <label for="jourDebut">Jour :</label>
-                <input type="number" id="jourDebut" min="1" max="31">
 
-                <label for="moisDebut">Mois :</label>
+                <label for="jourDebut">
+                    Jour :
+                </label>
+
+                <input
+                    type="number"
+                    id="jourDebut"
+                    min="1"
+                    max="31"
+                >
+
+
+                <label for="moisDebut">
+                    Mois :
+                </label>
+
                 <select id="moisDebut">
+
                     <option value="1">Janvier</option>
                     <option value="2">Février</option>
                     <option value="3">Mars</option>
@@ -50,18 +112,42 @@
                     <option value="10">Octobre</option>
                     <option value="11">Novembre</option>
                     <option value="12">Décembre</option>
+
                 </select>
 
-                <label for="anneeDebut">Année :</label>
-                <input type="number" id="anneeDebut" placeholder="Ex : -44">
+
+                <label for="anneeDebut">
+                    Année :
+                </label>
+
+                <input
+                    type="number"
+                    id="anneeDebut"
+                    placeholder="Ex : -44"
+                >
+
 
                 <h3>Date de fin</h3>
 
-                <label for="jourFin">Jour :</label>
-                <input type="number" id="jourFin" min="1" max="31">
 
-                <label for="moisFin">Mois :</label>
+                <label for="jourFin">
+                    Jour :
+                </label>
+
+                <input
+                    type="number"
+                    id="jourFin"
+                    min="1"
+                    max="31"
+                >
+
+
+                <label for="moisFin">
+                    Mois :
+                </label>
+
                 <select id="moisFin">
+
                     <option value="1">Janvier</option>
                     <option value="2">Février</option>
                     <option value="3">Mars</option>
@@ -74,40 +160,97 @@
                     <option value="10">Octobre</option>
                     <option value="11">Novembre</option>
                     <option value="12">Décembre</option>
+
                 </select>
 
-                <label for="anneeFin">Année :</label>
-                <input type="number" id="anneeFin" placeholder="Ex : 476">
 
-                <label for="couleur">Couleur :</label>
-                <input type="color" id="couleur">
+                <label for="anneeFin">
+                    Année :
+                </label>
 
-                <br><br>
+                <input
+                    type="number"
+                    id="anneeFin"
+                    placeholder="Ex : 476"
+                >
 
-                <button id="creerNouvelElement">Créer</button>
-                <button id="annulerNouvelElement">Annuler</button>
+
+                <label for="couleur">
+                    Couleur :
+                </label>
+
+                <input
+                    type="color"
+                    id="couleur"
+                    value="#69e692"
+                >
+
+
+                <button id="creerNouvelElement">
+                    Créer
+                </button>
+
+                <button id="annulerNouvelElement">
+                    Annuler
+                </button>
 
             </div>
+
         </div>
 
-        <button id="annuler">Annuler</button>
-        <button id="refaire">Refaire</button>
+
+        <!-- Annuler / Refaire -->
+
+        <button id="annuler">
+            Annuler
+        </button>
+
+        <button id="refaire">
+            Refaire
+        </button>
+
+
+        <!-- Zoom -->
+
+        <button id="zoomMoins">
+            −
+        </button>
+
+        <span id="niveauZoom">
+            100%
+        </span>
+
+        <button id="zoomPlus">
+            +
+        </button>
 
     </header>
+
+
+    <!-- =================== -->
+    <!-- ZONE DE TRAVAIL -->
+    <!-- =================== -->
 
     <main>
 
         <section id="workspace">
 
             <div class="timeline">
+
                 <div class="timeline-top">
+
                     <div class="border-bottom"></div>
+
                 </div>
+
 
                 <div class="timelineEvents"></div>
 
+
                 <div class="timeline-bottom">
+
                     <div class="border-top"></div>
+
                 </div>
 
             </div>
@@ -116,7 +259,160 @@
 
     </main>
 
+
+    <!-- =================== -->
+    <!-- MODAL MODIFICATION -->
+    <!-- =================== -->
+
+    <div
+        id="modalModifierEvenement"
+        class="modalModifierEvenement"
+    >
+
+        <div class="modalContentModifierEvenement">
+
+            <h2>
+                Modifier l'événement
+            </h2>
+
+
+            <label for="modifierTitre">
+                Titre :
+            </label>
+
+            <input
+                type="text"
+                id="modifierTitre"
+            >
+
+
+            <h3>
+                Date de début
+            </h3>
+
+
+            <label for="modifierJourDebut">
+                Jour :
+            </label>
+
+            <input
+                type="number"
+                id="modifierJourDebut"
+                min="1"
+                max="31"
+            >
+
+
+            <label for="modifierMoisDebut">
+                Mois :
+            </label>
+
+            <select id="modifierMoisDebut">
+
+                <option value="1">Janvier</option>
+                <option value="2">Février</option>
+                <option value="3">Mars</option>
+                <option value="4">Avril</option>
+                <option value="5">Mai</option>
+                <option value="6">Juin</option>
+                <option value="7">Juillet</option>
+                <option value="8">Août</option>
+                <option value="9">Septembre</option>
+                <option value="10">Octobre</option>
+                <option value="11">Novembre</option>
+                <option value="12">Décembre</option>
+
+            </select>
+
+
+            <label for="modifierAnneeDebut">
+                Année :
+            </label>
+
+            <input
+                type="number"
+                id="modifierAnneeDebut"
+            >
+
+
+            <h3>
+                Date de fin
+            </h3>
+
+
+            <label for="modifierJourFin">
+                Jour :
+            </label>
+
+            <input
+                type="number"
+                id="modifierJourFin"
+                min="1"
+                max="31"
+            >
+
+
+            <label for="modifierMoisFin">
+                Mois :
+            </label>
+
+            <select id="modifierMoisFin">
+
+                <option value="1">Janvier</option>
+                <option value="2">Février</option>
+                <option value="3">Mars</option>
+                <option value="4">Avril</option>
+                <option value="5">Mai</option>
+                <option value="6">Juin</option>
+                <option value="7">Juillet</option>
+                <option value="8">Août</option>
+                <option value="9">Septembre</option>
+                <option value="10">Octobre</option>
+                <option value="11">Novembre</option>
+                <option value="12">Décembre</option>
+
+            </select>
+
+
+            <label for="modifierAnneeFin">
+                Année :
+            </label>
+
+            <input
+                type="number"
+                id="modifierAnneeFin"
+            >
+
+
+            <label for="modifierCouleur">
+                Couleur :
+            </label>
+
+            <input
+                type="color"
+                id="modifierCouleur"
+            >
+
+
+            <button id="confirmerModification">
+                Modifier
+            </button>
+
+            <button id="supprimerEvenement">
+                Supprimer
+            </button>
+
+            <button id="annulerModification">
+                Annuler
+            </button>
+
+        </div>
+
+    </div>
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>

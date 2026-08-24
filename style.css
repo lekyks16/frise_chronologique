@@ -27,266 +27,529 @@ h1 {color: darkblue;text-align: center; font-size: 40px;}
 
 
 
-    /* index2.html */
+/* =================== */
+/* Général */
+/* =================== */
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
+
+
+/* =================== */
+/* Page */
+/* =================== */
 
 .index2-body {
     margin: 0;
     height: 100vh;
+
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
 }
+
+
+/* =================== */
+/* Barre d'outils */
+/* =================== */
 
 header {
     background-color: lightblue;
+
     border: 2px solid black;
-    height: 70px;
     border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+
+    height: 70px;
+
     margin-bottom: 10px;
+
     display: flex;
     align-items: center;
+
     gap: 10px;
+
+    box-shadow:
+        1px 4px 6px rgba(0, 0, 0, 0.2);
+
+    flex-shrink: 0;
 }
 
-main {
-    display: flex;
-    flex: 1;
-    gap: 10px;
+
+/* =================== */
+/* Boutons */
+/* =================== */
+
+header button {
     padding: 10px;
-}
 
-#workspace {
-    flex: 1;
-    border: 2px solid black;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Boutton Sauvegarder */
-
-#sauvegarder {
-    margin: 10px;
-    padding: 10px;
     background-color: lightblue;
+
     border: 2px solid black;
     border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        1px 4px 6px rgba(0, 0, 0, 0.2);
+
     cursor: pointer;
 }
 
+
+header button:hover {
+    background-color: white;
+}
+
+
+/* =================== */
+/* Retour */
+/* =================== */
+
+.retour {
+    margin-left: 10px;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =================== */
+/* Zone de travail */
+/* =================== */
+
+main {
+    display: flex;
+
+    flex: 1;
+
+    padding: 10px;
+
+    overflow: hidden;
+}
+
+
+#workspace {
+    flex: 1;
+
+    border: 2px solid black;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        1px 4px 6px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+
+    overflow: hidden;
+
+    user-select: none;
+
+    cursor: grab;
+
+    touch-action: none;
+}
+
+
+#workspace:active {
+    cursor: grabbing;
+}
+
+
+/* =================== */
+/* Sauvegarde */
+/* =================== */
+
 #modalSauvegarder {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+
+    background-color:
+        rgba(0, 0, 0, 0.5);
+
     display: none;
+
     justify-content: center;
     align-items: center;
+
     z-index: 9999;
 }
 
+
 .modalContentSauvegarder {
     background-color: white;
+
     padding: 20px;
+
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3);
+
     text-align: center;
 }
 
 
-/* Boutton Nouvel élément */
-
-#nouvelElement {
-    margin: 10px;
-    padding: 10px;
-    background-color: lightblue;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
+/* =================== */
+/* Modal nouvel événement */
+/* =================== */
 
 #modalNouvelElement {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+
+    background-color:
+        rgba(0, 0, 0, 0.5);
+
     display: none;
+
     justify-content: center;
     align-items: center;
+
     z-index: 9999;
 }
 
+
 .modalContentNouvelElement {
     background-color: white;
+
     padding: 25px;
+
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3);
+
     width: 420px;
+
     max-height: 90vh;
+
     overflow-y: auto;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
+
 
 .modalContentNouvelElement h2,
 .modalContentNouvelElement h3 {
     margin: 5px 0;
+
     text-align: center;
 }
+
 
 .modalContentNouvelElement label {
     font-weight: bold;
 }
 
+
 .modalContentNouvelElement input,
 .modalContentNouvelElement select {
     padding: 8px;
+
     border: 1px solid gray;
+
     border-radius: 6px;
+
     font-size: 15px;
 }
 
+
 .modalContentNouvelElement button {
     margin-top: 10px;
+
     padding: 10px;
+
     cursor: pointer;
 }
 
 
-/* Boutton Annuler */
+/* =================== */
+/* Modal modification */
+/* =================== */
 
-#annuler {
-    margin: 10px;
+.modalModifierEvenement {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:
+        rgba(0, 0, 0, 0.5);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+.modalContentModifierEvenement {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3);
+
+    width: 420px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.modalContentModifierEvenement h2,
+.modalContentModifierEvenement h3 {
+    margin: 5px 0;
+
+    text-align: center;
+}
+
+
+.modalContentModifierEvenement label {
+    font-weight: bold;
+}
+
+
+.modalContentModifierEvenement input,
+.modalContentModifierEvenement select {
+    padding: 8px;
+
+    border: 1px solid gray;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+.modalContentModifierEvenement button {
+    margin-top: 10px;
+
     padding: 10px;
-    background-color: lightblue;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+
     cursor: pointer;
 }
 
 
-/* Boutton Refaire */
+/* =================== */
+/* Zoom */
+/* =================== */
 
-#refaire {
-    margin: 10px;
-    padding: 10px;
-    background-color: lightblue;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+#zoomMoins,
+#zoomPlus {
+    padding: 8px 14px;
+
+    font-size: 18px;
 }
 
 
+#niveauZoom {
+    min-width: 55px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =================== */
 /* Timeline */
+/* =================== */
 
 .timeline {
-    width: 100%;
-    min-height: 300px;
-    border: 2px dashed red;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 50000px;
+
+    min-height: 5000px;
+
     display: flex;
+
     flex-direction: column;
+
+    transform-origin: 0 0;
 }
 
+
+/* =================== */
+/* Partie haute */
+/* =================== */
+
 .timeline-top {
-    flex: 1;
+    height: 300px;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
 }
+
 
 .border-bottom {
     width: 90%;
+
     height: 4px;
-    background: black;
+
+    background-color: black;
 }
 
+
+/* =================== */
+/* Événements */
+/* =================== */
+
 .timelineEvents {
-    flex: 2;
-    border: 2px dashed green;
     position: relative;
-    padding: 10px;
-    overflow: visible;
+
+    width: 100%;
+
+    min-height: 3000px;
 }
+
+
+/* =================== */
+/* Événement */
+/* =================== */
 
 .evenement {
     width: 180px;
+
     min-height: 60px;
+
     border: 2px solid black;
+
     border-radius: 10px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
+    text-align: center;
+
     font-weight: bold;
+
     padding: 8px;
+
     position: absolute;
+
     z-index: 2;
+
+    cursor: pointer;
+
+    user-select: none;
 }
 
-.timeline-bottom {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.evenement:hover {
+    filter: brightness(1.05);
 }
 
-.border-top {
-    width: 90%;
-    height: 4px;
-    background: black;
+
+/* =================== */
+/* Événement sélectionné */
+/* =================== */
+
+.evenement.selectionne {
+    outline: 4px solid blue;
 }
 
-/* Traits */
+
+/* =================== */
+/* Traits des événements */
+/* =================== */
 
 .traitDebut,
 .traitFin {
     position: absolute;
+
     width: 2px;
-    background: black;
+
+    background-color: black;
+
     z-index: 1;
+
+    pointer-events: none;
 }
+
 
 .traitDebut {
     left: 0;
-    top: -35px;
-    height: 35px;
+
+    top: -40px;
+
+    height: 40px;
 }
+
 
 .traitFin {
     right: 0;
-    bottom: -35px;
-    height: 35px;
+
+    bottom: -40px;
+
+    height: 40px;
 }
 
-#zoomMoins,
-#zoomPlus {
-    margin: 10px;
-    padding: 10px;
-    background-color: lightblue;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 1px 4px 6px rgba(0,0,0,0.2);
-    cursor: pointer;
+
+/* =================== */
+/* Partie basse */
+/* =================== */
+
+.timeline-bottom {
+    height: 300px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
-#workspace{
-    user-select: none;
-    cursor: grab;
-}
 
-#workspace:active{
-    cursor: grabbing;
-}
+.border-top {
+    width: 90%;
 
+    height: 4px;
+
+    background-color: black;
+}
