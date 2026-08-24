@@ -22,33 +22,79 @@
         </div>
 
         <button id="nouvelElement">Nouvel élément</button>
+
         <div id="modalNouvelElement" class="modalNouvelElement">
             <div class="modalContentNouvelElement">
+
                 <h2>Nouvel événement</h2>
 
                 <label for="titre">Titre :</label>
                 <input type="text" id="titre">
 
-                <label for="dateDebut">Date de début :</label>
-                <input type="date" id="dateDebut">
+                <h3>Date de début</h3>
 
-                <label for="dateFin">Date de fin :</label>
-                <input type="date" id="dateFin">
+                <label for="jourDebut">Jour :</label>
+                <input type="number" id="jourDebut" min="1" max="31">
+
+                <label for="moisDebut">Mois :</label>
+                <select id="moisDebut">
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+
+                <label for="anneeDebut">Année :</label>
+                <input type="number" id="anneeDebut" placeholder="Ex : -44">
+
+                <h3>Date de fin</h3>
+
+                <label for="jourFin">Jour :</label>
+                <input type="number" id="jourFin" min="1" max="31">
+
+                <label for="moisFin">Mois :</label>
+                <select id="moisFin">
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+
+                <label for="anneeFin">Année :</label>
+                <input type="number" id="anneeFin" placeholder="Ex : 476">
 
                 <label for="couleur">Couleur :</label>
                 <input type="color" id="couleur">
 
-<button id="creerNouvelElement">Créer</button>
-<button id="annulerNouvelElement">Annuler</button>
+                <br><br>
+
+                <button id="creerNouvelElement">Créer</button>
+                <button id="annulerNouvelElement">Annuler</button>
+
             </div>
         </div>
-        <button id="annuler">Annuler</button>
 
+        <button id="annuler">Annuler</button>
         <button id="refaire">Refaire</button>
 
-
     </header>
-    
+
     <main>
 
         <section id="workspace">
@@ -69,7 +115,8 @@
         </section>
 
     </main>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
-
-
+</html>
